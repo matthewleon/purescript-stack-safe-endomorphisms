@@ -1,0 +1,14 @@
+{
+  "name": "purescript-stack-safe-endomorphisms",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-monoid": "^3.3.0",
+    "purescript-catenable-lists": "^4.0.0"
+  },
+  "devDependencies": {}
+}
