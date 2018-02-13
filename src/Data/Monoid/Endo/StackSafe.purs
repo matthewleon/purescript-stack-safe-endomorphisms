@@ -6,7 +6,7 @@ module Data.Monoid.Endo.StackSafe
 
 import Prelude
 
-import Data.CatList (CatList)
+import Data.CatList (CatList, singleton)
 import Data.Foldable (foldl)
 import Data.Functor.Invariant (class Invariant)
 import Data.Monoid (class Monoid)
@@ -28,7 +28,7 @@ instance invariantEndo :: Invariant Endo where
 
 -- | Constructor
 endo :: forall a. (a -> a) -> Endo a
-endo = wrap <<< pure <<< wrap
+endo = wrap <<< singleton <<< wrap
 
 applyEndo :: forall a. Endo a -> a -> a
 applyEndo (Endo es) x = foldl go x es
